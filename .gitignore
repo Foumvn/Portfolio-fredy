@@ -1,0 +1,65 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+.content-collections
+
+# Gallery images - keep only essential ones
+public/*portrait*.png
+public/brand-*.png
+public/cool-*.png
+public/green-*.png
+public/italy-*.png
+public/neon-*.png
+public/newbrand-*.png
+public/rain-*.png
+public/random-*.png
+public/atomic.png
+public/laurier.png
+public/mitremedia.png
+public/nvidia.png
+public/waterloo.png
+public/ib.png
+
+# Keep essential images for portfolio
+!public/me.jpeg
+!public/kairos.png
+!public/chp.png
+!public/cs-tech.png
+!public/ekounou.png
+!public/universite.png
