@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef, useCallback } from "react"
 import confetti from "canvas-confetti"
+import { Star } from "lucide-react"
 import { galleryProjects as initialProjects, type GalleryProject } from "@/lib/gallery-data"
 import { ProjectFolder } from "@/components/gallery/project-folder"
 import { Toaster } from "sonner"
@@ -47,6 +48,7 @@ export default function GalleryPage() {
   const [showContent, setShowContent] = useState(false)
   const mainRef = useRef<HTMLElement>(null)
   const [selectedProject, setSelectedProject] = useState<GalleryProject | null>(null)
+  const [liked, setLiked] = useState(false)
 
   useEffect(() => {
     const hasNewInvisible = newProjects.some((p) => p.isNew && !p.isVisible)
@@ -164,8 +166,13 @@ export default function GalleryPage() {
             <div className="flex items-center justify-between h-12 mb-6 px-1">
               <h1 className="text-lg sm:text-xl font-semibold text-white tracking-tight">Design Prestations</h1>
               <button
-                className="text-sm font-medium text-black rounded-full hover:bg-white/90 transition-colors py-1.5 bg-card-foreground px-3 whitespace-nowrap"
+                className={`text-sm font-medium rounded-full transition-all py-1.5 px-3 sm:px-4 whitespace-nowrap flex items-center gap-1.5 ${
+                  liked
+                    ? "bg-amber-100 text-amber-700 hover:bg-amber-200"
+                    : "text-black bg-card-foreground hover:bg-white/90"
+                }`}
                 onClick={(e) => {
+                  setLiked((prev) => !prev)
                   const rect = e.currentTarget.getBoundingClientRect()
                   const x = (rect.left + rect.width / 2) / window.innerWidth
                   const y = (rect.top + rect.height / 2) / window.innerHeight
@@ -203,6 +210,11 @@ export default function GalleryPage() {
                   }, 100)
                 }}
               >
+                <Star
+                  className={`w-4 h-4 transition-all ${
+                    liked ? "fill-amber-500 text-amber-500" : "text-current"
+                  }`}
+                />
                 Appreciation
               </button>
             </div>
