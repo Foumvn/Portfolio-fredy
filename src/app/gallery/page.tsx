@@ -9,6 +9,7 @@ import { FullpageLoader } from "@/components/gallery/fullpage-loader"
 import { useGeneration } from "@/contexts/generation-context"
 import { motion } from "motion/react"
 import { NewProjectSlot } from "@/components/gallery/new-project-slot"
+import { ProjectModal } from "@/components/gallery/project-modal"
 
 const PROJECT_CONFIGS = [
   {
@@ -45,6 +46,7 @@ export default function GalleryPage() {
   const animatingRef = useRef(false)
   const [showContent, setShowContent] = useState(false)
   const mainRef = useRef<HTMLElement>(null)
+  const [selectedProject, setSelectedProject] = useState<GalleryProject | null>(null)
 
   useEffect(() => {
     const hasNewInvisible = newProjects.some((p) => p.isNew && !p.isVisible)
@@ -103,7 +105,8 @@ export default function GalleryPage() {
     setProjects((prev) => prev.filter((p) => String(p.id) !== projectId))
   }, [])
 
-  const handleFolderClick = useCallback(() => {
+  const handleFolderClick = useCallback((project: GalleryProject) => {
+    setSelectedProject(project)
   }, [])
 
   const handleRenameProject = useCallback((projectId: string, newTitle: string) => {
@@ -157,9 +160,9 @@ export default function GalleryPage() {
         }}
       >
         <main ref={mainRef} className="flex-1 min-h-screen p-4 pt-12 sm:p-6 sm:pt-14 md:p-8 md:pt-16">
-          <div className="mx-auto w-full" style={{ maxWidth: "912px" }}>
+          <div className="mx-auto w-full" style={{ maxWidth: "1400px" }}>
             <div className="flex items-center justify-between h-12 mb-6 px-1">
-              <h1 className="text-lg sm:text-xl font-semibold text-white tracking-tight">Clips</h1>
+              <h1 className="text-lg sm:text-xl font-semibold text-white tracking-tight">Design Prestations</h1>
               <button
                 className="text-sm font-medium text-black rounded-full hover:bg-white/90 transition-colors py-1.5 bg-card-foreground px-3 whitespace-nowrap"
                 onClick={(e) => {
@@ -200,7 +203,7 @@ export default function GalleryPage() {
                   }, 100)
                 }}
               >
-                Start Trial
+                Appreciation
               </button>
             </div>
 
@@ -208,7 +211,7 @@ export default function GalleryPage() {
               className="mx-auto"
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, 288px)",
+                gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
                 gap: "24px",
                 justifyContent: "center",
                 width: "100%",
@@ -252,6 +255,8 @@ export default function GalleryPage() {
           </div>
         </main>
       </div>
+
+      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </div>
   )
 }

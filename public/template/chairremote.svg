@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D3436"/>
+      <stop offset="100%" stop-color="#1A1A2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Chair silhouette -->
+  <rect x="360" y="180" width="80" height="40" rx="5" fill="#E74C3C" opacity="0.3"/>
+  <rect x="340" y="220" width="120" height="15" rx="3" fill="#E74C3C" opacity="0.25"/>
+  <rect x="380" y="235" width="10" height="60" fill="#E74C3C" opacity="0.3"/>
+  <rect x="410" y="235" width="10" height="60" fill="#E74C3C" opacity="0.3"/>
+  <rect x="360" y="180" width="15" height="10" rx="3" fill="#E74C3C" opacity="0.2"/>
+  <rect x="425" y="180" width="15" height="10" rx="3" fill="#E74C3C" opacity="0.2"/>
+  <!-- Bluetooth symbol -->
+  <text x="400" y="155" text-anchor="middle" fill="#00E5FF" font-family="system-ui" font-size="24" opacity="0.7">B</text>
+  <!-- Connection waves -->
+  <path d="M250 170 Q280 140 310 170" fill="none" stroke="#00E5FF" stroke-width="2" opacity="0.5"/>
+  <path d="M230 190 Q280 140 330 190" fill="none" stroke="#00E5FF" stroke-width="1.5" opacity="0.3"/>
+  <!-- Arduino board -->
+  <rect x="550" y="180" width="40" height="60" rx="3" fill="#00E5FF" opacity="0.15"/>
+  <circle cx="560" cy="195" r="3" fill="#00E5FF" opacity="0.4"/>
+  <circle cx="580" cy="195" r="3" fill="#00E5FF" opacity="0.4"/>
+  <circle cx="560" cy="220" r="3" fill="#00E5FF" opacity="0.4"/>
+  <circle cx="580" cy="220" r="3" fill="#00E5FF" opacity="0.4"/>
+  <text x="400" y="340" text-anchor="middle" fill="#00E5FF" font-family="system-ui" font-size="24" font-weight="bold">ChairRemote</text>
+  <text x="400" y="363" text-anchor="middle" fill="#E74C3C" font-family="system-ui" font-size="13" opacity="0.7">IoT & Robotique — Le mouvement intelligent</text>
+</svg>

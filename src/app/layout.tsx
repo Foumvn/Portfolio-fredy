@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { ChatbotOverlay } from "@/components/chatbot-overlay";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function RootLayout({
               {children}
             </div>
             <Navbar />
+            <ChatbotOverlay />
           </TooltipProvider>
         </ThemeProvider>
       </body>

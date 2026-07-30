@@ -1,29 +1,29 @@
 ---
-title: "TypeScript Best Practices for Clean, Maintainable Code"
+title: "Bonnes Pratiques TypeScript pour un Code Propre et Maintenable"
 publishedAt: "2024-12-08"
 updatedAt: "2024-12-08"
-author: "John Doe"
-summary: "Essential TypeScript patterns and practices that will make your codebase more robust and easier to maintain."
+author: "Fredy Foumane"
+summary: "Les patterns et pratiques TypeScript essentiels qui rendront votre codebase plus robuste et facile à maintenir."
 image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=192&fit=crop"
 ---
 
-# TypeScript Best Practices for Clean, Maintainable Code
+# Bonnes Pratiques TypeScript pour un Code Propre et Maintenable
 
-TypeScript shines when it helps you model reality — not when it forces you to fight types all day. A few small defaults can make a codebase feel <mark>calmer, safer, and easier to refactor</mark>.
+TypeScript brille quand il vous aide à modéliser la réalité — pas quand vous devez lutter contre les types toute la journée. Quelques bonnes habitudes rendent un codebase plus calme, plus sûr et plus facile à refactoriser.
 
 <MediaContainer
   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&fit=crop"
-  alt="TypeScript code on screen"
+  alt="Code TypeScript sur écran"
 />
 
-## Practical rules of thumb
+## Règles pratiques
 
-- Turn on strictness and fix the sharp edges early.
-- Prefer readable types over clever types.
-- Use unions for “one of these”, interfaces for “shape of this”.
-- Avoid `any` as a shortcut; it becomes ~~future debt~~ fast.
+- Activez le mode strict et corrigez les angles morts tôt.
+- Préférez les types lisibles aux types astucieux.
+- Utilisez les unions pour "un parmi ceux-ci", les interfaces pour "la forme de ceci".
+- Évitez `any` comme raccourci ; ça devient une dette future.
 
-## One pattern worth memorizing
+## Un pattern à mémoriser
 
 ```ts
 type Result<T> =
@@ -32,10 +32,10 @@ type Result<T> =
 
 export function parseNumber(input: string): Result<number> {
   const n = Number(input);
-  return Number.isFinite(n) ? { ok: true, value: n } : { ok: false, error: "Not a number" };
+  return Number.isFinite(n) ? { ok: true, value: n } : { ok: false, error: "Ce n'est pas un nombre" };
 }
 ```
 
-## Wrap-up
+## Conclusion
 
-The best TypeScript code reads like good documentation: clear names, predictable shapes, and errors that point you to the fix.
+Le meilleur code TypeScript se lit comme une bonne documentation : des noms clairs, des formes prévisibles, et des erreurs qui pointent vers la solution.

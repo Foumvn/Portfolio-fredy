@@ -19,7 +19,7 @@ export function ProjectFolder({
   onRename,
 }: ProjectFolderProps & {
   onRemove?: () => void
-  onClick?: () => void
+  onClick?: (project: GalleryProject) => void
   onCancel?: () => void
   onRename?: (newTitle: string) => void
 }) {
@@ -69,7 +69,7 @@ export function ProjectFolder({
     
     setIsShaking(true)
     setTimeout(() => setIsShaking(false), 500)
-    onClick?.()
+    onClick?.(project)
   }
 
   if (project.isFailed) {

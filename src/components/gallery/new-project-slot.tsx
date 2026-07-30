@@ -105,7 +105,7 @@ export function NewProjectSlot({ onClick }: NewProjectSlotProps) {
             <div className="absolute inset-x-0 top-0 h-[1px] border-t border-dashed border-white/[0.04]" />
             <div className="absolute inset-0 flex items-center justify-between px-4">
               <span className="text-[13px] text-white/40 transition-colors duration-300 group-hover:text-white/60">
-                Generate AI Clips
+                 Clips
               </span>
             </div>
           </div>

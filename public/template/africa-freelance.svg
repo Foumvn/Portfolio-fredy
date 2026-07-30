@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3A5C"/>
+      <stop offset="100%" stop-color="#0F1B2D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A8D5A2"/>
+      <stop offset="100%" stop-color="#E8B84B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <circle cx="400" cy="200" r="120" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.3"/>
+  <circle cx="400" cy="200" r="80" fill="none" stroke="url(#accent)" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="400" cy="200" r="40" fill="url(#accent)" opacity="0.15"/>
+  <text x="400" y="180" text-anchor="middle" fill="#A8D5A2" font-family="system-ui" font-size="28" font-weight="bold">AfricaFreelance</text>
+  <text x="400" y="220" text-anchor="middle" fill="#E8B84B" font-family="system-ui" font-size="14" opacity="0.8">Le pont entre les talents africains et les opportunités</text>
+  <path d="M350 260 Q400 290 450 260" fill="none" stroke="#A8D5A2" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="350" cy="150" r="4" fill="#A8D5A2" opacity="0.4"/>
+  <circle cx="450" cy="160" r="3" fill="#E8B84B" opacity="0.4"/>
+  <circle cx="320" cy="200" r="3" fill="#A8D5A2" opacity="0.3"/>
+  <circle cx="480" cy="190" r="2" fill="#E8B84B" opacity="0.3"/>
+</svg>

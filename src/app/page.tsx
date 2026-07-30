@@ -9,6 +9,8 @@ import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
+import { CvButtons } from "@/components/cv-buttons";
+import { ContactInfo } from "@/components/contact-info";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -40,9 +42,17 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="cv" className="flex flex-col items-center gap-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <ContactInfo />
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <CvButtons />
+        </BlurFade>
+      </section>
       <section id="about">
         <div className="flex min-h-0 flex-col gap-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <h2 className="text-xl font-bold">About</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
@@ -56,10 +66,10 @@ export default function Page() {
       </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <WorkSection />
           </BlurFade>
         </div>

@@ -11,6 +11,9 @@ export default function GalleryLayout({
     <div
       className="dark"
       style={{
+        width: "100vw",
+        marginLeft: "calc(-50vw + 50%)",
+        marginRight: "calc(-50vw + 50%)",
         ["--background" as string]: "#191919",
         ["--foreground" as string]: "#f5f5f5",
         ["--card" as string]: "#222222",

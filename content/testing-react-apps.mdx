@@ -1,36 +1,36 @@
 ---
-title: "Testing React Applications: A Practical Guide"
+title: "Tester les Applications React : Un Guide Pratique"
 publishedAt: "2024-12-14"
 updatedAt: "2024-12-14"
-author: "John Doe"
-summary: "From unit tests to E2E—learn how to build confidence in your React applications with comprehensive testing."
+author: "Fredy Foumane"
+summary: "Des tests unitaires aux tests E2E — apprenez à construire la confiance dans vos applications React avec des tests complets."
 image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=192&fit=crop"
 ---
 
-# Testing React Applications: A Practical Guide
+# Tester les Applications React : Un Guide Pratique
 
-Tests are your safety net — they let you refactor with confidence and ship changes without fear. The goal is not “as many tests as possible”; it’s <mark>confidence in the critical paths</mark>.
+Les tests sont votre filet de sécurité — ils vous permettent de refactoriser en confiance et de livrer des changements sans crainte. L'objectif n'est pas "le plus de tests possible" ; c'est la confiance dans les chemins critiques.
 
-If your test suite feels slow or fragile, it usually means you’re testing the wrong thing. In practice, you can ignore a lot of “perfect coverage” advice and focus on a few high-signal habits.
+Si votre suite de tests semble lente ou fragile, c'est que vous testez probablement les mauvaises choses. En pratique, vous pouvez ignorer beaucoup de conseils sur la "couverture parfaite" et vous concentrer sur quelques habitudes à fort impact.
 
-## What to test (a simple rule)
+## Que tester (une règle simple)
 
-- **Unit tests**: small, fast checks for logic and pure functions.
-- **Integration tests**: components + data + user flows (most value per test).
-- **E2E tests**: a few happy-path checks across the whole app.
+- **Tests unitaires** : vérifications petites et rapides pour la logique et les fonctions pures.
+- **Tests d'intégration** : composants + données + flux utilisateur (le meilleur rapport valeur/test).
+- **Tests E2E** : quelques vérifications de parcours heureux sur l'ensemble de l'app.
 
-## High-signal testing habits
+## Habitudes de test à fort impact
 
-- Prefer user-facing assertions (what the user sees/does).
-- Use accessible queries first (roles, labels).
-- Mock at the boundary (network) instead of mocking implementation details.
+- Préférez les assertions orientées utilisateur (ce que l'utilisateur voit/fait).
+- Utilisez d'abord les requêtes accessibles (rôles, labels).
+- Mockez à la frontière (réseau) plutôt que de mocker les détails d'implémentation.
 
-## Things to avoid
+## À éviter
 
-- ~~Testing internal component state~~ when behavior is what matters.
-- ~~Sprinkling test IDs everywhere~~ as a first choice.
-- Overusing snapshots that fail for harmless UI changes.
+- ~~Tester l'état interne des composants~~ alors que le comportement est ce qui compte.
+- ~~Mettre des identifiants de test partout~~ comme premier recours.
+- Abuser des snapshots qui échouent pour des changements UI mineurs.
 
-## Wrap-up
+## Conclusion
 
-Start small: one integration test for your most important flow, then add unit tests for tricky logic. Over time, your tests become living documentation that helps you move faster.
+Commencez petit : un test d'intégration pour votre flux le plus important, puis ajoutez des tests unitaires pour la logique complexe. Avec le temps, vos tests deviennent une documentation vivante qui vous aide à aller plus vite.

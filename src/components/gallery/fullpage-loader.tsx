@@ -86,7 +86,7 @@ export function FullpageLoader({ duration = 1600, onComplete }: FullpageLoaderPr
               })}
             </div>
           </div>
-          <h1 className="font-semibold tracking-tight text-white/90 text-2xl">Portfolio Gallery</h1>
+          <h1 className="font-semibold tracking-tight text-white/90 text-2xl"> Gallery Design</h1>
           <div className="mt-4 w-52">
             <div className="rounded-full bg-white/10 overflow-hidden h-1.5 w-full">
               <div

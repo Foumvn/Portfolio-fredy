@@ -1,28 +1,28 @@
 ---
-title: "Building Scalable Design Systems with React and Tailwind"
+title: "Construire des Design Systems Scalables avec React et Tailwind"
 publishedAt: "2024-12-01"
 updatedAt: "2024-12-01"
-author: "John Doe"
-summary: "A comprehensive guide to creating maintainable design systems that scale with your team and product."
+author: "Fredy Foumane"
+summary: "Un guide complet pour créer des design systems maintenables qui évoluent avec votre équipe et votre produit."
 image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=192&fit=crop"
 ---
 
-Design systems are the backbone of consistent user interfaces. Here's how to build one that scales.
+Les design systems sont le pilier des interfaces utilisateur cohérentes. Voici comment en construire un qui évolue.
 
-## Why Design Systems Matter
+## Pourquoi les Design Systems sont importants
 
-A well-crafted design system provides:
+Un design system bien conçu offre :
 
-- **Consistency** across all products
-- **Faster development** with reusable components
-- **Better collaboration** between designers and developers
-- **Reduced technical debt** over time
+- **Cohérence** sur tous les produits
+- **Développement plus rapide** avec des composants réutilisables
+- **Meilleure collaboration** entre designers et développeurs
+- **Dette technique réduite** sur le long terme
 
-## Core Principles
+## Principes fondamentaux
 
-### 1. Start with Tokens
+### 1. Commencez par les Tokens
 
-Design tokens are the atomic values of your system:
+Les tokens de design sont les valeurs atomiques de votre système :
 
 ```typescript title="tokens.ts"
 export const tokens = {
@@ -54,9 +54,9 @@ export const tokens = {
 } as const;
 ```
 
-### 2. Build Primitive Components
+### 2. Construisez des Composants Primitifs
 
-Start with the basics:
+Commencez par les bases :
 
 ```tsx title="Button.tsx"
 import { cva, type VariantProps } from "class-variance-authority";
@@ -94,29 +94,29 @@ export function Button({ variant, size, className, ...props }: ButtonProps) {
 }
 ```
 
-## Component Composition
+## Composition de Composants
 
-Build complex components from primitives:
+Construisez des composants complexes à partir des primitives :
 
-| Level | Examples | Purpose |
-|-------|----------|---------|
-| Tokens | Colors, spacing, typography | Foundation |
-| Primitives | Button, Input, Badge | Building blocks |
-| Patterns | Card, Modal, Dropdown | Common UI patterns |
-| Templates | PageHeader, Sidebar | Layout structures |
+| Niveau | Exemples | Rôle |
+|--------|----------|------|
+| Tokens | Couleurs, espacement, typographie | Fondation |
+| Primitives | Button, Input, Badge | Blocs de base |
+| Patterns | Card, Modal, Dropdown | Patterns UI courants |
+| Templates | PageHeader, Sidebar | Structures de mise en page |
 
-## Documentation is Key
+## La Documentation est Clé
 
-> "A design system without documentation is just a component library."
+> "Un design system sans documentation n'est qu'une bibliothèque de composants."
 
-Every component should include:
+Chaque composant devrait inclure :
 
-1. **Usage examples** - Show common use cases
-2. **Props documentation** - Explain all options
-3. **Accessibility notes** - ARIA labels, keyboard nav
-4. **Do's and Don'ts** - Guide proper usage
+1. **Exemples d'utilisation** — Montrez les cas d'usage courants
+2. **Documentation des props** — Expliquez toutes les options
+3. **Notes d'accessibilité** — Labels ARIA, navigation clavier
+4. **À faire et à éviter** — Guidez vers une utilisation correcte
 
-## Versioning Strategy
+## Stratégie de Versioning
 
 ```json title="package.json"
 {
@@ -129,18 +129,18 @@ Every component should include:
 }
 ```
 
-Use semantic versioning:
-- **Major**: Breaking changes
-- **Minor**: New features (backward compatible)
-- **Patch**: Bug fixes
+Utilisez le versioning sémantique :
+- **Major** : Changements cassants
+- **Minor** : Nouvelles fonctionnalités (rétrocompatibles)
+- **Patch** : Corrections de bugs
 
 ## Conclusion
 
-Building a design system is an investment that pays dividends in:
+Construire un design system est un investissement qui rapporte en :
 
-- Developer productivity
-- Design consistency
-- User experience
-- Team collaboration
+- Productivité des développeurs
+- Cohérence du design
+- Expérience utilisateur
+- Collaboration d'équipe
 
-Start small, iterate often, and document everything.
+Commencez petit, itérez souvent, et documentez tout.
