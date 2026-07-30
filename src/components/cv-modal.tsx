@@ -49,7 +49,7 @@ export function CvModal({ isOpen, onClose }: CvModalProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-8"
+          className="fixed inset-0 z-[300] flex items-center justify-center p-0 sm:p-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -58,7 +58,7 @@ export function CvModal({ isOpen, onClose }: CvModalProps) {
           onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
         >
           <motion.div
-            className="relative w-full max-w-4xl h-[85vh] rounded-2xl overflow-hidden flex flex-col"
+            className="relative w-full h-full sm:h-[85vh] sm:max-w-4xl rounded-none sm:rounded-2xl overflow-hidden flex flex-col"
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}

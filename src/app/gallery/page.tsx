@@ -211,9 +211,10 @@ export default function GalleryPage() {
               className="mx-auto"
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
                 gap: "24px",
                 justifyContent: "center",
+                justifyItems: "center",
                 width: "100%",
               }}
             >

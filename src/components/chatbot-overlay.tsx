@@ -144,14 +144,14 @@ export function ChatbotOverlay() {
       {/* Floating button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-8 right-8 z-[150] w-20 h-20 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-200"
+        className="fixed bottom-28 sm:bottom-8 right-4 sm:right-8 z-[150] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-200"
         style={{
           background: "oklch(0.145 0 0)",
           border: "1px solid rgba(255, 255, 255, 0.1)",
         }}
         aria-label="Ouvrir le chat IA"
       >
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
         </svg>
       </button>
@@ -175,7 +175,7 @@ export function ChatbotOverlay() {
 
             {/* Chat panel */}
             <motion.div
-              className="relative w-full sm:max-w-lg sm:h-[600px] h-[90dvh] flex flex-col rounded-t-2xl sm:rounded-2xl overflow-hidden"
+              className="relative w-full sm:max-w-lg sm:h-[600px] h-[90dvh] flex flex-col rounded-t-2xl sm:rounded-2xl overflow-hidden min-w-0"
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 40, scale: 0.95 }}
@@ -244,15 +244,15 @@ export function ChatbotOverlay() {
               </div>
 
               {/* Input */}
-              <div className="border-t border-white/[0.06] px-5 py-4 shrink-0">
-                <form onSubmit={handleSubmit} className="flex gap-2">
+              <div className="border-t border-white/[0.06] px-3 sm:px-5 py-4 shrink-0 min-w-0">
+                <form onSubmit={handleSubmit} className="flex gap-2 min-w-0">
                   <input
                     ref={inputRef}
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="Pose-moi une question..."
-                    className="flex-1 bg-white/[0.06] text-white text-sm rounded-xl px-4 py-2.5 outline-none placeholder:text-white/30 border border-white/[0.06] focus:border-white/20 transition-colors"
+                    className="flex-1 min-w-0 bg-white/[0.06] text-white text-sm rounded-xl px-3 sm:px-4 py-2.5 outline-none placeholder:text-white/30 border border-white/[0.06] focus:border-white/20 transition-colors"
                     disabled={isLoading}
                   />
                   <button
