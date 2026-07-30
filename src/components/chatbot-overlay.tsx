@@ -244,27 +244,27 @@ export function ChatbotOverlay() {
               </div>
 
               {/* Input */}
-              <div className="border-t border-white/[0.06] px-3 sm:px-5 py-4 shrink-0 min-w-0">
-                <form onSubmit={handleSubmit} className="flex gap-2 min-w-0">
+              <div className="border-t border-white/[0.06] px-4 sm:px-5 py-5 sm:py-4 shrink-0 min-w-0">
+                <form onSubmit={handleSubmit} className="flex gap-3 sm:gap-2 min-w-0">
                   <input
                     ref={inputRef}
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="Pose-moi une question..."
-                    className="flex-1 min-w-0 bg-white/[0.06] text-white text-sm rounded-xl px-4 sm:px-4 py-3 sm:py-2.5 outline-none placeholder:text-white/30 border border-white/[0.06] focus:border-white/20 transition-colors"
+                    className="flex-1 min-w-0 bg-white/[0.06] text-white text-[16px] sm:text-sm rounded-xl px-4 py-3.5 sm:py-2.5 outline-none placeholder:text-white/30 border border-white/[0.06] focus:border-white/20 transition-colors"
                     disabled={isLoading}
                   />
                   <button
                     type="submit"
                     disabled={!input.trim() || isLoading}
-                    className="w-12 h-12 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-200 disabled:opacity-30"
+                    className="w-14 h-14 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-200 disabled:opacity-30"
                     style={{
                       background: !input.trim() || isLoading ? "oklch(0.3 0 0)" : "oklch(0.985 0 0)",
                       color: "oklch(0.205 0 0)",
                     }}
                   >
-                    <svg width="20" height="20" className="sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" className="sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m22 2-7 20-4-9-9-4Z" />
                     </svg>
                   </button>
