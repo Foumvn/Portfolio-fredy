@@ -3,6 +3,7 @@
 import type React from "react"
 
 import type { ProjectFolderProps } from "./types"
+import type { GalleryProject } from "@/lib/gallery-data"
 import { useProjectState } from "./hooks"
 import { FailedProject } from "./failed-project"
 import { DefaultProject } from "./default-project"

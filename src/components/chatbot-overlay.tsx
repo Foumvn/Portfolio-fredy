@@ -61,7 +61,7 @@ interface Message {
 
 const INITIAL_MESSAGE: Message = {
   role: "assistant",
-  content: "Salut ! Je suis Zfred, l'assistant IA de Fredy. Pose-moi des questions sur son parcours, ses compétences ou ses projets ! 👋",
+  content: "Salut je suis Zfred l'assistant IA de Fredy Foumane",
 }
 
 export function ChatbotOverlay() {
