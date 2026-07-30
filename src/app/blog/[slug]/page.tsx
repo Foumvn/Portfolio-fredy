@@ -7,6 +7,7 @@ import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { StickyBackButton } from "@/components/sticky-back-button";
 
 function getSortedPosts() {
   return [...allPosts].sort((a, b) => {
@@ -122,12 +123,7 @@ export default async function Blog({
           __html: jsonLdContent,
         }}
       />
-      <div className="flex justify-start gap-4 items-center">
-        <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group" aria-label="Back to Blog">
-          <ChevronLeft className="size-3 group-hover:-translate-x-px transition-transform" />
-          Retour au Blog
-        </Link>
-      </div>
+      <StickyBackButton />
       <div className="flex flex-col gap-4">
         <h1 className="title font-semibold text-3xl md:text-4xl tracking-tighter leading-tight">
           {post.title}
